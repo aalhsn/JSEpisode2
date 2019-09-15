@@ -19,7 +19,29 @@
 ****************************************************************/
 function pairs(names) {
   // Your code goes here
+  const results=[]
+  let p1
+  let p2
+  if (names){
+
+    while ((names.length) !== 0){
+    
+      p1= names.getRandom();
+      p2= names.getRandom();
+  
+      if (!p1){
+        results.push([p2]);
+      } else if (!p2){
+        results.push([p1]);
+      } else results.push([p1,p2]);
+    }
+    
+  } 
+  
+  return results;
+    
 }
+
 
 module.exports = pairs;
 
